@@ -10,7 +10,7 @@ using OpenQA.Selenium.Remote;
 
 namespace BumblebeeAndroid
 {
-    class RemoteAndroidEnvironment : IDriverEnvironment
+    public class RemoteAndroidEnvironment : IDriverEnvironment
     {
         public RemoteAndroidEnvironment(DesiredCapabilities capabilites, string url)
         {

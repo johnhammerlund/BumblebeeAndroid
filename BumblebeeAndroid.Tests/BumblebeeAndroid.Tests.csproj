@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B9AED9C-B727-4107-A3CD-4DBCCB90A7A6}</ProjectGuid>
+    <ProjectGuid>{E60AB405-AEEF-46F1-B3D5-F201D92A8F00}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BumblebeeAndroid</RootNamespace>
-    <AssemblyName>BumblebeeAndroid</AssemblyName>
+    <RootNamespace>BumblebeeAndroid.Tests</RootNamespace>
+    <AssemblyName>BumblebeeAndroid.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,67 +31,65 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bumblebee">
-      <HintPath>lib\Bumblebee.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\Bumblebee.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core">
-      <HintPath>lib\Castle.Core.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Gallio, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\Gallio.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\Gallio.dll</HintPath>
     </Reference>
     <Reference Include="Gallio35, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\Gallio35.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\Gallio35.dll</HintPath>
     </Reference>
     <Reference Include="Gallio40, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\Gallio40.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\Gallio40.dll</HintPath>
     </Reference>
     <Reference Include="MbUnit, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\MbUnit.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\MbUnit.dll</HintPath>
     </Reference>
     <Reference Include="MbUnit35, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\MbUnit35.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\MbUnit35.dll</HintPath>
     </Reference>
     <Reference Include="MbUnit40, Version=3.4.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\MbUnit40.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\MbUnit40.dll</HintPath>
     </Reference>
     <Reference Include="Selenium.WebDriverBackedSelenium">
-      <HintPath>lib\Selenium.WebDriverBackedSelenium.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\Selenium.WebDriverBackedSelenium.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="ThoughtWorks.Selenium.Core">
-      <HintPath>lib\ThoughtWorks.Selenium.Core.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\ThoughtWorks.Selenium.Core.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver">
-      <HintPath>lib\WebDriver.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver.Support">
-      <HintPath>lib\WebDriver.Support.dll</HintPath>
+      <HintPath>..\BumblebeeAndroid\lib\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ByAndroid.cs" />
-    <Compile Include="Implementation\DroidBlock.cs" />
-    <Compile Include="Implementation\AndroidDragAndDrop.cs" />
-    <Compile Include="Implementation\DroidWebBlock.cs" />
-    <Compile Include="RemoteAndroidEnvironment.cs" />
-    <Compile Include="DroidDriver.cs" />
+    <Compile Include="AndroidSession.cs" />
+    <Compile Include="DeleteMe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Exentions\" />
+    <ProjectReference Include="..\BumblebeeAndroid\BumblebeeAndroid.csproj">
+      <Project>{1b9aed9c-b727-4107-a3cd-4dbccb90a7a6}</Project>
+      <Name>BumblebeeAndroid</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
