@@ -87,6 +87,7 @@
     <Compile Include="Exentions\CoreActions.cs" />
     <Compile Include="Exentions\InnerConvenience.cs" />
     <Compile Include="Implementation\AndroidSpinner.cs" />
+    <Compile Include="Implementation\AppiumCheckbox.cs" />
     <Compile Include="Implementation\AppiumDroidBlock.cs" />
     <Compile Include="Implementation\OrientationAction.cs" />
     <Compile Include="Implementation\SelendroidBlock.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="RemoteAndroidEnvironment.cs" />
     <Compile Include="DroidDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelendroidCapabilities.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

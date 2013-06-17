@@ -7,43 +7,43 @@ using OpenQA.Selenium;
 
 namespace BumblebeeAndroid
 {
-    class ByAndroid : By
+    public class ByAndroid
     {
         public static By ResourceID(string id)
         {
-            return Id(id);
+            return By.Id(id);
         }
 
         public static By Label(string label)
         {
-            return Name(label);
+            return By.Name(label);
         }
 
         public static By Value(string value)
         {
-            return LinkText(value);
+            return By.LinkText(value);
         }
 
         public static By PartialValue(string value)
         {
-            return PartialLinkText(value);
+            return By.PartialLinkText(value);
         }
 
         public static By AndroidClass(string androidClass)
         {
-            return ClassName(androidClass);
+            return By.ClassName(androidClass);
         }
 
         public static By UIType(string type)
         {
-            return TagName(type);
+            return By.TagName(type);
         }
 
         //Appium Specific
 
         public static By ContentDesc(string contentDesc)
         {
-            return Name(contentDesc);
+            return By.Name(contentDesc);
         }
     }
 }

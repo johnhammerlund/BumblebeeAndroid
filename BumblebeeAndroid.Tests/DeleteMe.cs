@@ -52,8 +52,9 @@ namespace BumblebeeAndroid.Tests
         [Test, Parallelizable]
         public void StartAvd()
         {
-            Session.Driver.FindElement(By.Name("my_text_fieldCD")).SendKeys("Aw yis");
-            Session.CurrentBlock<HomeView>().ChangeOrientation().ToPortrait();
+            Session.CurrentBlock<HomeView>()
+                //.DebugPrint(homeView => Session.Driver.PageSource)
+                   .AcceptAddsChk.Uncheck();
             Console.WriteLine(Session.Driver.PageSource);
             Thread.Sleep(5000);
         }

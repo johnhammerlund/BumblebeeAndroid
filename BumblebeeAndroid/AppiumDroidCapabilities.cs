@@ -9,14 +9,6 @@ namespace BumblebeeAndroid
 {
     public class AppiumDroidCapabilities : DesiredCapabilities
     {
-        /*internal string DEVICE = "Android";
-        internal string BROWSER_NAME = "";
-        internal string PLATFORM = "MAC";
-        internal string VERSION;
-        internal string APP;
-        internal string APP_PACKAGE;
-        internal string APP_ACTIVITY;*/
-
         public AppiumDroidCapabilities()
         {
             SetDevice("Android");

@@ -24,7 +24,7 @@ namespace BumblebeeAndroid.Implementation
             get
             {
                 return GetElements(ByAndroid.AndroidClass("android.widget.TextView"))
-                    .Select(e => new Option<TResult>(ParentBlock, e));
+                    .Select(e => new AndroidOption<TResult>(ParentBlock, e));
             }
         }
     }
@@ -44,8 +44,24 @@ namespace BumblebeeAndroid.Implementation
             get
             {
                 return GetElements(ByAndroid.AndroidClass("android.widget.CheckedTextView"))
-                    .Select(e => new Option<TResult>(ParentBlock, e));
+                    .Select(e => new AndroidOption<TResult>(ParentBlock, e));
             }
+        }
+    }
+
+    public class AndroidOption<TResult> : Option<TResult> where TResult : IBlock
+    {
+        public AndroidOption(IBlock parent, By @by) : base(parent, @by)
+        {
+        }
+
+        public AndroidOption(IBlock parent, IWebElement element) : base(parent, element)
+        {
+        }
+
+        public override bool Selected
+        {
+            get { return bool.Parse(Tag.GetAttribute("checked")); }
         }
     }
 }

@@ -14,6 +14,7 @@ namespace BumblebeeAndroid.Implementation
     {
         public AppiumDroidBlock(Session session) : base(session)
         {
+            Tag = Session.Driver.FindElement(By.XPath("//linear[1]/window[2]"));
         }
 
         public override IPerformsDragAndDrop GetDragAndDropPerformer()
