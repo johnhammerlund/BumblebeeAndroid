@@ -19,9 +19,9 @@ namespace BumblebeeAndroid
 
         public AppiumDroidCapabilities()
         {
-            SetCapability("device", "Android");
-            SetCapability("platform", "MAC");
-            SetCapability("browserName", "");
+            SetDevice("Android");
+            SetPlatform("MAC");
+            SetBrowserName("");
         }
 
         public AppiumDroidCapabilities SetDevice(string device)
