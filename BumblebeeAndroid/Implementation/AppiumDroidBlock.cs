@@ -1,14 +1,19 @@
-﻿using Bumblebee.Implementation;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Bumblebee.Implementation;
 using Bumblebee.Interfaces;
 using Bumblebee.Setup;
+using OpenQA.Selenium;
 
 namespace BumblebeeAndroid.Implementation
 {
-    public class DroidBlock : Block
+    public class AppiumDroidBlock : Block
     {
-        public DroidBlock(Session session) : base(session)
+        public AppiumDroidBlock(Session session) : base(session)
         {
-            Session.Driver.SwitchTo().Window("NATIVE_APP");
         }
 
         public override IPerformsDragAndDrop GetDragAndDropPerformer()

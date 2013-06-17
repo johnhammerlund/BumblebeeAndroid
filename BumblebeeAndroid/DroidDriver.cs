@@ -10,6 +10,8 @@ namespace BumblebeeAndroid
 {
     public class DroidDriver : RemoteWebDriver, IHasTouchScreen, ITakesScreenshot
     {
+        private string _remoteAddr = "http://127.0.0.1:4444/wd/hub";
+
         public DroidDriver(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities) : base(commandExecutor, desiredCapabilities)
         {
             TouchScreen = new RemoteTouchScreen(this);
@@ -22,11 +24,13 @@ namespace BumblebeeAndroid
 
         public DroidDriver(Uri remoteAddress, ICapabilities desiredCapabilities) : base(remoteAddress, desiredCapabilities)
         {
+            _remoteAddr = remoteAddress.ToString();
             TouchScreen = new RemoteTouchScreen(this);
         }
 
         public DroidDriver(Uri remoteAddress, ICapabilities desiredCapabilities, TimeSpan commandTimeout) : base(remoteAddress, desiredCapabilities, commandTimeout)
         {
+            _remoteAddr = remoteAddress.ToString();
             TouchScreen = new RemoteTouchScreen(this);
         }
 
@@ -36,6 +40,16 @@ namespace BumblebeeAndroid
         {
             String base64 = Execute(DriverCommand.Screenshot, null).Value.ToString();
             return new Screenshot(base64);
+        }
+
+        public string GetSessionId()
+        {
+            return SessionId.ToString();
+        }
+
+        public string GetRemoteAddress()
+        {
+            return _remoteAddr;
         }
     }
 }

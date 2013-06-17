@@ -8,7 +8,7 @@ using BumblebeeAndroid.Implementation;
 
 namespace BumblebeeAndroid.Tests.PageObjects
 {
-    public class HomeView : DroidBlock
+    public class HomeView : AppiumDroidBlock
     {
         public HomeView(Session session) : base(session)
         {

@@ -4,9 +4,11 @@ using System.Linq;
 using System.IO;
 using System.Threading;
 using Bumblebee.Setup;
+using BumblebeeAndroid.Tests.PageObjects;
 using MbUnit.Framework;
 using OpenQA.Selenium;
 using Bumblebee.Extensions;
+using BumblebeeAndroid.Exentions;
 using OpenQA.Selenium.Remote;
 
 namespace BumblebeeAndroid.Tests
@@ -38,13 +40,11 @@ namespace BumblebeeAndroid.Tests
             map.Add("app-package", "io.selendroid.testapp");
             map.Add("app-activity", "HomeScreenActivity");
 
-            var capabilities = new AppiumCapabilities().SetAppActivity("HomeScreenActivity")
+            var capabilities = new AppiumDroidCapabilities().SetAppActivity("HomeScreenActivity")
                                                        .SetAppPackage("io.selendroid.testapp")
                                                        .SetPlatform("MAC")
                                                        .SetBrowserName("")
                                                        .SetDevice("Android");
-
-            var cap = new DesiredCapabilities(map);
 
             Session = new AndroidSession(new RemoteAndroidEnvironment(capabilities, "http://10.211.55.2:4723/wd/hub"));
         }
@@ -53,7 +53,7 @@ namespace BumblebeeAndroid.Tests
         public void StartAvd()
         {
             Session.Driver.FindElement(By.Name("my_text_fieldCD")).SendKeys("Aw yis");
-
+            Session.CurrentBlock<HomeView>().ChangeOrientation().ToPortrait();
             Console.WriteLine(Session.Driver.PageSource);
             Thread.Sleep(5000);
         }

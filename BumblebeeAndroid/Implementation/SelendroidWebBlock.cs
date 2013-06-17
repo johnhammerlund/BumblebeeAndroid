@@ -9,9 +9,9 @@ using Bumblebee.Setup;
 
 namespace BumblebeeAndroid.Implementation
 {
-    public class DroidWebBlock: Block
+    public class SelendroidWebBlock: Block
     {
-        public DroidWebBlock(Session session) : base(session)
+        public SelendroidWebBlock(Session session) : base(session)
         {
             Session.Driver.SwitchTo().Window("WEBVIEW");
         }

@@ -82,18 +82,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppiumCapabilities.cs" />
+    <Compile Include="AppiumDroidCapabilities.cs" />
     <Compile Include="ByAndroid.cs" />
-    <Compile Include="Implementation\DroidBlock.cs" />
+    <Compile Include="Exentions\CoreActions.cs" />
+    <Compile Include="Exentions\InnerConvenience.cs" />
+    <Compile Include="Implementation\AndroidSpinner.cs" />
+    <Compile Include="Implementation\AppiumDroidBlock.cs" />
+    <Compile Include="Implementation\OrientationAction.cs" />
+    <Compile Include="Implementation\SelendroidBlock.cs" />
     <Compile Include="Implementation\AndroidDragAndDrop.cs" />
-    <Compile Include="Implementation\DroidWebBlock.cs" />
+    <Compile Include="Implementation\SelendroidWebBlock.cs" />
     <Compile Include="RemoteAndroidEnvironment.cs" />
     <Compile Include="DroidDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Exentions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

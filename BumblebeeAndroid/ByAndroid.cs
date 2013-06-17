@@ -38,5 +38,12 @@ namespace BumblebeeAndroid
         {
             return TagName(type);
         }
+
+        //Appium Specific
+
+        public static By ContentDesc(string contentDesc)
+        {
+            return Name(contentDesc);
+        }
     }
 }
