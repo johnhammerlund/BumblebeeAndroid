@@ -82,6 +82,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppiumCapabilities.cs" />
     <Compile Include="ByAndroid.cs" />
     <Compile Include="Implementation\DroidBlock.cs" />
     <Compile Include="Implementation\AndroidDragAndDrop.cs" />
