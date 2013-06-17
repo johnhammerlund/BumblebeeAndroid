@@ -58,47 +58,6 @@ namespace BumblebeeAndroid.Tests
             Thread.Sleep(5000);
         }
 
-        [Test, Parallelizable]
-        public void ParallelTest()
-        {
-            Session.Driver.FindElement(By.Id("my_text_field")).SendKeys("More awesomeness");
-
-            long start = System.DateTime.Now.Millisecond;
-            Console.Write(AsHexString(((ITakesScreenshot) Session.Driver).GetScreenshot().AsByteArray));
-            long end = System.DateTime.Now.Millisecond;
-
-            Console.WriteLine("This extremely efficient method took " + (end - start) + " seconds");
-            Thread.Sleep(5000);
-        }
-
-        public string AsHexString(byte[] arr)
-        {
-            string values = "0123456789abcdef";
-
-            int count = 1;
-            string output = "";
-
-            foreach(byte b in arr)
-            {
-                var first = b >> 4;
-                var second = b & 15;
-
-                output += values[first];
-                output += values[second];
-                if (count%16 == 0)
-                {
-                    output += "\n";
-                } else if (count%2 == 0)
-                {
-                    output += " ";
-                }
-                count++;
-            }
-
-            return output;
-        }
-
-
         [TearDown]
         public void TearDown()
         {
