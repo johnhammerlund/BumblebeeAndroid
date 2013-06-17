@@ -26,9 +26,9 @@ namespace BumblebeeAndroid.Tests.PageObjects
             get { return new Clickable<AppiumDroidBlock>(this, ByAndroid.ContentDesc("buttonStartWebview")); }
         }
 
-        public IClickable<AppiumDroidBlock> UserRegistrationBtn
+        public IClickable<RegisterView> UserRegistrationBtn
         {
-            get { return new Clickable<AppiumDroidBlock>(this, ByAndroid.ContentDesc("startUserRegistration")); }
+            get { return new Clickable<RegisterView>(this, ByAndroid.ContentDesc("startUserRegistrationCD")); }
         }
 
         public ITextField<HomeView> TextField

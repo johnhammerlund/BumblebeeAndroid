@@ -14,5 +14,14 @@ namespace BumblebeeAndroid.Exentions
         {
             return new OrientationAction<TResult>(block);
         }
+
+        public static TResult PressBackButton<TResult>(this IBlock block) where TResult : IBlock
+        {
+            var driver = ((DroidDriver) block.Session.Driver);
+            var uriString = driver.GetRemoteAddress() + "/session/" + driver.GetSessionId() + "/back";
+            InnerConvenience.ExecutePost(uriString, null);
+
+            return block.Session.CurrentBlock<TResult>();
+        }
     }
 }

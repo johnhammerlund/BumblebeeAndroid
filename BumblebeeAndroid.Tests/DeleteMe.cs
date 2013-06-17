@@ -54,7 +54,8 @@ namespace BumblebeeAndroid.Tests
         {
             Session.CurrentBlock<HomeView>()
                 //.DebugPrint(homeView => Session.Driver.PageSource)
-                   .AcceptAddsChk.Uncheck();
+                   .AcceptAddsChk.Uncheck().AcceptAddsChk.Check()
+                   .UserRegistrationBtn.Click().PressBackButton();
             Console.WriteLine(Session.Driver.PageSource);
             Thread.Sleep(5000);
         }

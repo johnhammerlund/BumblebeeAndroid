@@ -15,10 +15,13 @@ namespace BumblebeeAndroid.Exentions
 
             req.Method = "POST";
             req.ContentType = "application/json";
-            byte[] requestData = new ASCIIEncoding().GetBytes(jsonBody);
-            req.ContentLength = requestData.Length;
-            req.GetRequestStream().Write(requestData, 0, requestData.Length);
-            req.GetRequestStream().Close();
+            if (jsonBody != null)
+            {
+                byte[] requestData = new ASCIIEncoding().GetBytes(jsonBody);
+                req.ContentLength = requestData.Length;
+                req.GetRequestStream().Write(requestData, 0, requestData.Length);
+                req.GetRequestStream().Close();
+            }
 
             return req.GetResponse();
         }
