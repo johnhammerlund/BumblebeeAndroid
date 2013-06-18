@@ -42,7 +42,7 @@ namespace BumblebeeAndroid.Tests
             Session.CurrentBlock<HomeView>()
                 //.DebugPrint(homeView => Session.Driver.PageSource)
                    .AcceptAddsChk.Uncheck().AcceptAddsChk.Check()
-                   .UserRegistrationBtn.Click().LanguageSelect.Options.Last().Click();
+                   .WebviewBtn.Click().ActionSelect.Options.Random().Click();
             Console.WriteLine(Session.Driver.PageSource);
             Thread.Sleep(5000);
         }

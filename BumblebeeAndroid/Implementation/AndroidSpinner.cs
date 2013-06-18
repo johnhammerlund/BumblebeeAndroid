@@ -26,7 +26,9 @@ namespace BumblebeeAndroid.Implementation
         {
             get
             {
-                return GetElements(ByAndroid.AndroidClass("android.widget.TextView"))
+                Tag.Click();
+                return Session.Driver.FindElement(ByAndroid.AndroidClass("android.widget.ListView"))
+                                     .FindElements(ByAndroid.AndroidClass("android.widget.TextView"))
                     .Select(e => new AndroidOption<TResult>(ParentBlock, e));
             }
         }
@@ -47,6 +49,7 @@ namespace BumblebeeAndroid.Implementation
         {
             get
             {
+                Tag.Click();
                 return Session.Driver.FindElements(ByAndroid.AndroidClass("android.widget.CheckedTextView"))
                     .Select(e => new AndroidOption<TResult>(ParentBlock, e));
             }

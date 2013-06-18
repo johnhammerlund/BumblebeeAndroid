@@ -84,6 +84,7 @@
     <Compile Include="AndroidSession.cs" />
     <Compile Include="DeleteMe.cs" />
     <Compile Include="PageObjects\HomeView.cs" />
+    <Compile Include="PageObjects\HybridView.cs" />
     <Compile Include="PageObjects\RegisterView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
