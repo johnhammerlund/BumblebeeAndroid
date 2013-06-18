@@ -86,9 +86,11 @@
     <Compile Include="ByAndroid.cs" />
     <Compile Include="Exentions\CoreActions.cs" />
     <Compile Include="Exentions\InnerConvenience.cs" />
+    <Compile Include="Implementation\AndroidElement.cs" />
     <Compile Include="Implementation\AndroidSpinner.cs" />
     <Compile Include="Implementation\AppiumCheckbox.cs" />
     <Compile Include="Implementation\AppiumDroidBlock.cs" />
+    <Compile Include="Implementation\DroidBlock.cs" />
     <Compile Include="Implementation\OrientationAction.cs" />
     <Compile Include="Implementation\SelendroidBlock.cs" />
     <Compile Include="Implementation\AndroidDragAndDrop.cs" />

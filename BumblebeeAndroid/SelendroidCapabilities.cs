@@ -9,11 +9,6 @@ namespace BumblebeeAndroid
 {
     public class SelendroidCapabilities : DesiredCapabilities
     {
-        /*map.Add("emulator", true);
-            map.Add("locale", "en_US");
-            map.Add("androidTarget", "ANDROID17");
-            map.Add("aut", "io.selendroid.testapp:0.4-SNAPSHOT");*/
-
         public SelendroidCapabilities()
         {
             SetAndroidTarget(AndroidTarget.ANDROID17);

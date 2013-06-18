@@ -25,7 +25,7 @@ namespace BumblebeeAndroid.Tests.PageObjects
             {
                 GetElement(ByAndroid.AndroidClass("android.widget.Spinner")).Click();
                 Thread.Sleep(2000);
-                return new SelectBox<RegisterView>(this, ByAndroid.AndroidClass("android.widget.ListView"));
+                return new AndroidRadioSpinner<RegisterView>(this, ByAndroid.AndroidClass("android.widget.ListView"));
             }
         }
     }

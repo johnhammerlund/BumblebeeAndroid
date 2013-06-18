@@ -10,16 +10,11 @@ using OpenQA.Selenium;
 
 namespace BumblebeeAndroid.Implementation
 {
-    public class AppiumDroidBlock : Block
+    public class AppiumDroidBlock : DroidBlock
     {
         public AppiumDroidBlock(Session session) : base(session)
         {
             Tag = Session.Driver.FindElement(By.XPath("//linear[1]/window[2]"));
-        }
-
-        public override IPerformsDragAndDrop GetDragAndDropPerformer()
-        {
-            return new AndroidDragAndDrop(Session.Driver);
         }
     }
 }

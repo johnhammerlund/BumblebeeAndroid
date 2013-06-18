@@ -9,11 +9,15 @@ using Bumblebee.Setup;
 
 namespace BumblebeeAndroid.Implementation
 {
-    public class SelendroidWebBlock: DroidBlock
+    public abstract class DroidBlock : Block
     {
-        public SelendroidWebBlock(Session session) : base(session)
+        protected DroidBlock(Session session) : base(session)
         {
-            Session.Driver.SwitchTo().Window("WEBVIEW");
+        }
+
+        public override IPerformsDragAndDrop GetDragAndDropPerformer()
+        {
+            return new AndroidDragAndDrop(Session.Driver);
         }
     }
 }
