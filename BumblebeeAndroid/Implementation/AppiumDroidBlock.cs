@@ -14,7 +14,7 @@ namespace BumblebeeAndroid.Implementation
     {
         public AppiumDroidBlock(Session session) : base(session)
         {
-            Tag = Session.Driver.FindElement(By.XPath("//linear[1]/window[2]"));
+            Tag = Session.Driver.FindElement(By.XPath("//linear[1]"));
         }
     }
 }
