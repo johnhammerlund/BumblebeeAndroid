@@ -28,5 +28,10 @@ namespace BumblebeeAndroid.Implementation
         {
             get { return bool.Parse(Tag.GetAttribute("checked")); }
         }
+
+        public override string Text
+        {
+            get { return Tag.Text; }
+        }
     }
 }
