@@ -9,13 +9,13 @@ using OpenQA.Selenium;
 
 namespace BumblebeeAndroid.Implementation
 {
-    public class AndroidTextBox<TResult> : TextField<TResult> where TResult : IBlock
+    public class AndroidTextField<TResult> : TextField<TResult> where TResult : IBlock
     {
-        public AndroidTextBox(IBlock parent, By @by) : base(parent, @by)
+        public AndroidTextField(IBlock parent, By @by) : base(parent, @by)
         {
         }
 
-        public AndroidTextBox(IBlock parent, IWebElement tag) : base(parent, tag)
+        public AndroidTextField(IBlock parent, IWebElement tag) : base(parent, tag)
         {
         }
 
