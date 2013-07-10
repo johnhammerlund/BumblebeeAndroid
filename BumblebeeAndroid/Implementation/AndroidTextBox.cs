@@ -9,7 +9,7 @@ using OpenQA.Selenium;
 
 namespace BumblebeeAndroid.Implementation
 {
-    class AndroidTextBox<TResult> : TextField<TResult> where TResult : IBlock
+    public class AndroidTextBox<TResult> : TextField<TResult> where TResult : IBlock
     {
         public AndroidTextBox(IBlock parent, By @by) : base(parent, @by)
         {
