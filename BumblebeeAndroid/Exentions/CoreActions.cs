@@ -15,6 +15,15 @@ namespace BumblebeeAndroid.Exentions
             return new OrientationAction<TResult>(block);
         }
 
+        public static AlertAction<TResult> AcceptOrDeclineAlert<TResult>(this TResult block) where TResult : IBlock
+        {
+            return new AlertAction<TResult>(block);
+        }
+
+        public static WindowAction<TResult> ChangeWindow<TResult>(this TResult block) where TResult : IBlock
+        {
+            return new WindowAction<TResult>(block);
+        }
         public static TResult PressBackButton<TResult>(this IBlock block) where TResult : IBlock
         {
             var driver = ((DroidDriver) block.Session.Driver);
