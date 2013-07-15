@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="AppiumDroidCapabilities.cs" />
     <Compile Include="ByAndroid.cs" />
+    <Compile Include="Implementation\AlertAction.cs" />
     <Compile Include="Exentions\CoreActions.cs" />
     <Compile Include="Exentions\InnerConvenience.cs" />
     <Compile Include="Implementation\AndroidElement.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Implementation\SelendroidBlock.cs" />
     <Compile Include="Implementation\AndroidDragAndDrop.cs" />
     <Compile Include="Implementation\SelendroidWebBlock.cs" />
+    <Compile Include="Implementation\WindowAction.cs" />
     <Compile Include="RemoteAndroidEnvironment.cs" />
     <Compile Include="DroidDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
